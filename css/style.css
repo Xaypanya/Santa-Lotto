@@ -1,0 +1,126 @@
+:root {
+    --cyan: #61d4b3;
+    --white: #fff;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    background-color: var(--cyan);
+   
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    color: var(--white);
+    border-bottom: 1px solid rgb(255, 255, 255);
+    align-items: center;
+    justify-content: center;
+}
+
+
+header img {
+    align-self: center;
+    margin-left: 15px;
+    height: 50px;
+    width: 50px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+  
+}
+
+main {
+
+    text-align: center;
+    padding: 20px;    
+}
+
+main form {
+    width: 100%;
+    margin: 0 auto;
+    font-size: 1.5rem;
+}
+
+main form input[type=number] { 
+    width: 70%;
+    height: 1.6rem;
+    text-align: center;
+    font-size: 1.3rem;
+    border: 0px;
+    border-radius: 5px;
+    padding: 5px;
+    color: #00805b;;
+}
+
+main form input[type=submit],input[type=reset] {
+    margin-top: 15px;
+    padding: 0px 15px ;
+    text-align: center;
+    font-size: 1.3rem;
+    background-color: rgb(4, 223, 150);
+    border: 1px solid black;
+    border-radius: 20px;
+    
+ }
+
+ main form input[type=submit]:hover,input[type=reset]:hover {
+     opacity: 70%;
+     cursor: pointer;
+ } 
+
+ main form select {
+    height: 2.4rem;
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+    font-size: 1.3rem;
+    color: #00805b;
+
+ }
+
+form #percent:after {
+    content: "(ບໍ່ໃສ່ % ທາງທ້າຍ!)";
+    font-size: 1.2rem;
+    opacity: 85%;
+}
+
+
+footer {
+    border-bottom: 1px solid white;
+    margin-top: 0 auto;  
+    text-align: center;
+    height: 280px;
+}
+
+footer p {
+    color: black;
+    font-size: 1.5rem;
+}
+
+.result {
+    border: 1px solid black;
+    background-color: rgba(255, 255, 255, 0.774);
+    width: 70%;
+    height: 110px;
+    border-radius: 5px;
+    border: 0px;
+    margin: 0 auto;
+    padding-top: 1px;
+
+}
+
+#bottom {
+    transform: translateY(-50px);
+}
+
+
+
+span {
+    color: #fff;
+    align-self: center;
+    margin-top: 10px;
+}

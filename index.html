@@ -1,0 +1,80 @@
+<?php
+session_start();
+error_reporting(0);
+?>
+
+<!DOCTYPE html>
+<html lang="lo">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Santa Lotto</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="https://i.pinimg.com/236x/65/6c/f7/656cf7eaeec6a03affbf39c935c961c2.jpg">
+    <link rel="stylesheet" href="font/Defago/font-face.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h2>Santa Lotto</h2>
+            <img src="https://i.pinimg.com/236x/65/6c/f7/656cf7eaeec6a03affbf39c935c961c2.jpg" alt="icon">
+        </header>
+        <main>
+            <form action="index.html" method="post">
+                <label id="total" for="Input_total">ຈຳນວນເງິນທັງໝົດ ₭</label>
+                <br>
+                <input type="number" name="Input_total">
+                <br>
+                <label id="percent_opt_label" for="Input_percent"> ເລືອກເປີເຊັນ % </label>
+                <br>
+                <select id="percent_opt" name="percent_opt">
+                    <option value="20">20%</option>
+                    <option value="15">15%</option>
+                    <option value="10">10%</option>
+                </select>
+
+                <?php
+                $Input_total = $_POST['Input_total'];
+                $Input_percent = $_POST['percent_opt'];
+                $Total =  0;
+                if (empty($Input_total)) {
+                    $Input_total = 0;
+                } else {
+                    $Total = ($Input_total * $Input_percent) / 100;
+                }
+                ?>
+
+                <br>
+                <input type="submit" value="ໄລ່ເງິນ">
+                <input type="reset" value="ຍົກເລີກ">
+            </form>
+        </main>
+        <footer>
+            <p>ຜົນໄດ້ຮັບ:</p>
+            <div class="result">
+                <h3>ເງິນທັງໝົດ: <?php
+                                echo $Input_total;
+                                ?> ກີບ</h3>
+                <br>
+                <h3 id="bottom">ເງິນທີໄດ້ຮັບ: <?php
+                                                echo $Total;
+                                                ?> ກີບ</h3>
+            </div>
+
+
+        </footer>
+
+        <span>&copy; Copyright 2020 @Xaypanya</span>
+
+    </div>
+
+    <script>
+        if (window.history.replaceState) {
+            window.history.replaceState(null, null, window.location.href);
+        }
+    </script>
+</body>
+
+</html>
